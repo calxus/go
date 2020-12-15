@@ -3,10 +3,9 @@ FROM alpine:3.12
 MAINTAINER gtadam@protonmail.ch
 
 ENV GOROOT /usr/lib/go
-ENV GOPATH /go
-ENV PATH /go/bin:$PATH
+ENV GOPATH /go/src
 
 RUN apk add --no-cache go && \
-    mkdir -p ${GOPATH}/src ${GOPATH}/bin
+    mkdir -p ${GOPATH}
 
 WORKDIR $GOPATH
