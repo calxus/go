@@ -9,3 +9,5 @@ RUN apk add --no-cache go && \
     mkdir -p ${GOPATH}
 
 WORKDIR $GOPATH
+
+ENTRYPOINT ["go"]
